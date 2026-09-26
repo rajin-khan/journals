@@ -258,6 +258,12 @@ async function openJournal() {
   pendingAction = 'opening';
   syncView();
   await wait(settleFront());
+  // 333deg and -27deg look identical, but CSS would animate the long way to 0deg.
+  book.style.transition = 'none';
+  motion.yaw = -27;
+  book.style.transform = 'translateY(0px) rotateX(13deg) rotateY(-27deg) rotateZ(-2.5deg)';
+  void book.offsetWidth;
+  book.style.removeProperty('transition');
   scene.classList.add('is-unfastened');
   await wait(860);
   isOpen = true;

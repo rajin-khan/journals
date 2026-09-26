@@ -59,6 +59,7 @@ button { font: inherit; }
 }
 .masthead-title {
   display: inline-block;
+  margin: 0;
   font-family: "La Belle Aurore", "Bradley Hand", cursive;
   font-size: clamp(27px, 2.9vw, 35px);
   font-weight: 400;

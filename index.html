@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="An interactive 3D study of a stitched leather journal." />
+    <title>Rajin's Journals — vol. I</title>
+    <link rel="stylesheet" href="./styles.css?v=23" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead"><span class="masthead-title">Rajin's Journals</span><span class="volume">vol. I</span></header>
+
+      <main class="main-content">
+        <section class="viewer" aria-label="Interactive three-dimensional journal">
+          <div class="ambient ambient-one" aria-hidden="true"></div>
+          <div class="ambient ambient-two" aria-hidden="true"></div>
+          <div class="scene" id="scene">
+            <div class="book-shadow" aria-hidden="true"></div>
+            <div class="book-motion" id="bookMotion">
+              <div class="book" id="book">
+                <div class="back-cover cover" aria-hidden="true">
+                  <span class="cover-edge edge-free"></span>
+                  <span class="cover-edge edge-top"></span>
+                  <span class="cover-edge edge-bottom"></span>
+                  <div class="cover-face outside"><span class="stitches"></span></div>
+                  <div class="cover-face inside"><span class="stitches"></span></div>
+                </div>
+                <div class="spine" aria-hidden="true"></div>
+                <div class="paper-block" aria-hidden="true"><span class="paper-block-top"></span><span class="paper-block-bottom"></span></div>
+                <div class="last-page paper-face" id="lastPage" aria-hidden="true"></div>
+                <div class="ribbon" aria-hidden="true"></div>
+                <div class="sheets" id="sheets"></div>
+                <div class="binding-seam" aria-hidden="true"></div>
+                <button class="front-cover cover" id="coverButton" type="button" aria-label="Open journal">
+                  <span class="cover-edge edge-free"></span>
+                  <span class="cover-edge edge-top"></span>
+                  <span class="cover-edge edge-bottom"></span>
+                  <span class="cover-face outside"><span class="stitches"></span><span class="sticker-layer" id="stickerLayer" aria-hidden="true"></span><span class="cover-sheen"></span></span>
+                  <span class="cover-face inside"><span class="stitches"></span></span>
+                </button>
+                <div class="strap" aria-hidden="true">
+                  <div class="strap-anchor"></div>
+                  <div class="strap-wrap">
+                    <div class="strap-flap"><span class="snap"></span><span class="strap-sticker"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <button class="toggle-button" id="toggleButton" type="button" aria-controls="book" aria-expanded="false" aria-label="Open journal" data-phase="closed">
+          <span class="toggle-label" data-label="closed" aria-hidden="true">Open journal</span>
+          <span class="toggle-label" data-label="opening" aria-hidden="true">Opening…</span>
+          <span class="toggle-label" data-label="open" aria-hidden="true">Close journal</span>
+          <span class="toggle-label" data-label="closing" aria-hidden="true">Closing…</span>
+        </button>
+        <a class="portfolio-link" href="https://rajinkhan.com">home</a>
+      </footer>
+    </div>
+    <dialog class="viewport-notice" id="viewportNotice" aria-labelledby="viewportNoticeTitle" aria-describedby="viewportNoticeText">
+      <h2 id="viewportNoticeTitle">Best on a larger screen</h2>
+      <p id="viewportNoticeText">The journal is easier to open and read on a laptop, desktop, or iPad. You can still explore it here.</p>
+      <form method="dialog"><button type="submit">View journal here</button></form>
+    </dialog>
+    <script src="./script.js?v=23" defer></script>
+  </body>
+</html>
